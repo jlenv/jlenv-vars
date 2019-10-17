@@ -1,5 +1,7 @@
 # jlenv-vars: Print environment variables for current working directory
 
+[![Build Status](https://travis-ci.com/jlenv/jlenv-vars.svg?branch=master)](https://travis-ci.com/jlenv/jlenv-vars) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c23be1aa3ab3407d84a062f163d13ca8)](https://www.codacy.com/manual/taqtiqa-mark/jlenv-jlenv-vars?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jlenv/jlenv-vars&amp;utm_campaign=Badge_Grade) [![CodeFactor](https://www.codefactor.io/repository/github/jlenv/jlenv-vars/badge)](https://www.codefactor.io/repository/github/jlenv/jlenv-vars)
+
 This is a plugin for [jlenv](https://github.com/jlenv/jlenv)
 that lets you print global and project-specific environment variables
 before spawning Julia processes.  
@@ -27,7 +29,7 @@ order they will be set.
 ## Usage
 
 ```bash
-  jlenv help vars
+jlenv help vars
 ```
 
 Julia [environment variables are documented](https://docs.julialang.org/en/v1/manual/environment-variables/index.html).
