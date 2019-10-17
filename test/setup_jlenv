@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Setup the jlenv code the plugin will be tested against.
+if [ -d test/libs/jlenv ]; then
+  echo "Previosly setup by run"
+else
+  # Use --force to override the gitignore for test libs.
+  git submodule add --force https://github.com/jlenv/jlenv.git test/libs/jlenv
+
+  git submodule update --init --recursive
+fi

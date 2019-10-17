@@ -1,1 +1,17 @@
-.vscode
+# Don't track test scaffolding:
+test/libs/jlenv/
+test/libs/bats/
+test/libs/bats-file/
+test/libs/bats-support/
+test/libs/bats-mock/
+test/libs/bats-assert/
+test/libs/bats/
+test/libexec/bin
+test/libexec/libexec
+test/libexec/share
+
+# Editor settings
+.vscode/
+
+# merge conflict artifacts
+*.orig

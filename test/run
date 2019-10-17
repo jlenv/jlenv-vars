@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Move up one level if the test/run script exists. 
+# This places us at the root of the plugin source folder
+if [ ! -f test/run ]; then
+  cd ..
+fi
+
+# We should now be at the plugin root folder.  
+
+# Setup the bats and jlenv environment for testing.
+if [ -d test/libs ]; then
+  test/refresh_submodules
+else
+  test/setup_jlenv
+  test/setup_bats
+fi
+
+# Execute the Bats tests.
+
+exec test/libs/bats/bin/bats test/"$1"

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+
+DIR=$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)
+source ${DIR}/../test_semver.bash
+
+case $# in
+  0) echo "Unknown command: $*"; usage-help;;
+esac
+
+case $1 in
+  --help|-h|help) echo -e "$USAGE"; exit 0;;
+  --version|-v) usage-version ;;
+  bump) shift; semver-bump "$@";;
+  get) shift; semver-get "$@";;
+  compare) shift; semver-compare "$@";;
+  *) echo "Unknown arguments: $*"; usage-help;;
+esac
